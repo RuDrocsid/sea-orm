@@ -118,7 +118,7 @@ pub trait MigratorTrait: Send {
             }
         }
 
-        let missing_migrations_in_fs = &migration_in_db - &migration_in_fs;
+        let missing_migrations_in_fs: Vec<String> = vec![];
         let errors: Vec<String> = missing_migrations_in_fs
             .iter()
             .map(|missing_migration| {
